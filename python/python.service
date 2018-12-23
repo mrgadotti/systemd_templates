@@ -1,0 +1,13 @@
+[Unit]
+Description=main.py
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python main.py
+ExecReload=/bin/kill -HUP $MAINPID
+KillMode=process
+Restart=on-failure
+Type=simple
+
+[Install]
+WantedBy=multi-user.target
