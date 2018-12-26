@@ -3,7 +3,7 @@ Description=main.py
 After=network.target
 
 [Service]
-ExecStart=/usr/bin/python main.py
+ExecStart=/usr/bin/python /path/main.py
 ExecReload=/bin/kill -HUP $MAINPID
 KillMode=process
 Restart=on-failure
